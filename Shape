@@ -1,0 +1,21 @@
+import turtle    #Import library for visualization
+
+class Shape:
+  def __init__(self, sides, name):    #Define and initialize class
+    self.sides = sides 
+    self.name = name
+    self.interior_anlge = (self.sides-2)*180    #Sum of interior anlges
+    self.angle = self.interior_angle/self.sides    #Calculate angle
+
+
+  def draw(self):    #Define class method and reference Shape parameters
+    for i in range(self.sides):    #Iterate through the specified number of sides
+      turtle.forward(100)    #Move forward 100 pixels for each side 
+      turtle.right(180-self.angle)    #Turn at interior angle defined by shape
+    turtle.done()
+
+square = Shape(4, "Square")    #Define instance of Shape class
+pentagon = Shape(5, "Hexagon")
+octagon = Shape(8, "Octagon") 
+
+hexagon.draw()    #Turtle function to draw specified shape
