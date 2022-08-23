@@ -4,7 +4,7 @@ class Shape:
   def __init__(self, sides, name):    #Define and initialize class
     self.sides = sides 
     self.name = name
-    self.interior_anlge = (self.sides-2)*180    #Sum of interior anlges
+    self.interior_anlge = (self.sides-2)*180    #Sum of interior angles
     self.angle = self.interior_angle/self.sides    #Calculate angle
 
 
